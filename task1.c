@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-void try(float *p, int l){
+void pozmen_hodnoty_zachovajuc_priemer(float *p, int l){
     
-    if(p==0){
+    if(l==0){
         return;
     }
     
@@ -13,11 +13,10 @@ void try(float *p, int l){
     for(int i = 0; i < l; i++){
         sum += p[i];
     }
-
-    //float avg = sum / l;
     
     float rand_num[l];
     float rand_sum = 0;
+    float rand_avg = 0;
     
     srand(time(NULL);
 
@@ -28,8 +27,8 @@ void try(float *p, int l){
     for(int i = 0; i < l; i++){
         rand_sum += rand_num[i];
     }
-    
-    float rand_avg = rand_sum / l;
+     
+	rand_avg = rand_sum / l;
 
     for(int i = 0; i < l; i++){
         rand_num[i] - rand_avg;
