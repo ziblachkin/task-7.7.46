@@ -25,14 +25,14 @@ void pozmen_hodnoty_zachovajuc_priemer(float *p, int l){
         rand_sum += rand_num[i];
     }
 
-	rand_avg = rand_sum/l;
+	rand_avg = rand_sum/(float)l;
 
     for(int i = 0; i < l; i++){
         rand_num[i] - rand_avg;
     }
 
     for(int i = 0; i < l; i++){
-        p[i] + rand_num[i];
+        p[i] += rand_num[i];
     }
 
 }
@@ -40,7 +40,7 @@ void pozmen_hodnoty_zachovajuc_priemer(float *p, int l){
 int main(){
 	
 	float pole[]={3.7, 5.3, 7.3, 180.9, 55.2};
-	int l = sizeof(pole);
+	int l = sizeof(pole)/sizeof(float);
 	int i = 0;
 	
     srand(time(NULL));
