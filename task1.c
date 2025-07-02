@@ -18,7 +18,7 @@ void pozmen_hodnoty_zachovajuc_priemer(float *p, int l){
     }
     
     for(int i = 0; i < l; i++){
-        rand_num[i] = ((float(rand() % 200.0 )) -100.0 );    
+        rand_num[i] = (float)( rand() % 200 ) - 100.0;
     }
     
     for(int i = 0; i < l; i++){
@@ -39,11 +39,11 @@ void pozmen_hodnoty_zachovajuc_priemer(float *p, int l){
 
 int main(){
 	
-	float pole[]={3.7 5.3, 7.3, 180.9, 55.2};
+	float pole[]={3.7, 5.3, 7.3, 180.9, 55.2};
 	int l = sizeof(pole);
 	int i = 0;
 	
-    srand(time(NULL);
+    srand(time(NULL));
     
 	for(i = 0; i < l; i++){
 		printf("%.2f\n", pole[i]);
@@ -51,7 +51,8 @@ int main(){
 	
 	pozmen_hodnoty_zachovajuc_priemer(pole, l);
 	
-	printf("new one:\n")
+	printf("new one:\n");
+
 	for(i = 0; i < l; i++){
 		printf("%.2f\n", pole[i]);
 	}
